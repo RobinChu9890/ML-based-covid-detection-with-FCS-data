@@ -27,3 +27,5 @@ Common applications of flow cytometry include immunophenotyping, antigen specifi
 Ans. 
 
 By using gate methods, cells in a specific region can be chosen and isolated for further analysis. For example, if the target cells are bigger in size, a gate can be set on FSC (parameter for analyzing cell size) versus SSC plot. Additionally, FlowCal library provides gate functions to retain events that satisfy certain criteria but to discard those do not. For instance, an ellipse gate can retain an ellipse area by specifying three parameters. On the other hand, a density gate identifies region with density of events. There is only one parameter (i.e. gate_fraction) that is required for users to control, which is easier than the ellipse gate to define a shape that is more similar in the ungated map.
+
+> The answer of both questions refers to 
