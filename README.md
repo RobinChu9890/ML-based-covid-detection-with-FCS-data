@@ -14,10 +14,16 @@ To detect whether the sample is covid-positive or not, an SVM classifier provide
 
 ## Bonus Question
 
-1. Please explain the fundamental principles of flow cytometry and walk through the step-by-step process of how it works? Additionally, highlight some common applications of flow cytometry in scientific research and clinical settings.
+### Q1. Please explain the fundamental principles of flow cytometry and walk through the step-by-step process of how it works? Additionally, highlight some common applications of flow cytometry in scientific research and clinical settings.
 
 Ans. 
 
-2. Below are plots of selected cell surface biomarkers of blood cell samples. Researchers are interested in picking out cells marked in yellow (accupying a high-density chunk at the bottom-right) for further analysis. How would you suggest a method to automatically identify these cells?
+The fundamental principles of flow cytometry are light scattering and fluorescence emission, which occurs as light from a light source collides with the sample particles. There are three major systems in flow cytometry: fluidics, optics, and electronics. The fluidics system is composed of pressurized sheath fluid to deliver and to focus sample particles to the laser beam. The optics system contains excitation optics and collection optics. The former excites energy as light and strikes the light with particles, while the latter, including photomultiplier tubes, dichroic filters, and bandpass filter, transmits the scattered light and the fluorescence of particles to the electronics system. Finally, the electronics system detects the light signals and converts them into digital signals that can be analyzed by computer software.
+
+Common applications of flow cytometry include immunophenotyping, antigen specific responses, intracellular cytokine analysis, proliferation analysis, apoptosis analysis, fluorescent protein analysis, cell cycle analysis, signal transduction flow cytometry, RNA flow cytometry, and cell sorting.
+
+### Q2. Below are plots of selected cell surface biomarkers of blood cell samples. Researchers are interested in picking out cells marked in yellow (accupying a high-density chunk at the bottom-right) for further analysis. How would you suggest a method to automatically identify these cells?
 
 Ans. 
+
+By using gate methods, cells in a specific region can be chosen and isolated for further analysis. For example, if the target cells are bigger in size, a gate can be set on FSC (parameter for analyzing cell size) versus SSC plot. Additionally, FlowCal library provides gate functions to retain events that satisfy certain criteria but to discard those do not. For instance, an ellipse gate can retain an ellipse area by specifying three parameters. On the other hand, a density gate identifies region with density of events. There is only one parameter (i.e. gate_fraction) that is required for users to control, which is easier than the ellipse gate to define a shape that is more similar in the ungated map.
