@@ -29,7 +29,7 @@ for i in range(len(mapping_table)):
     if (mapping_table.loc[i, 'use']):
         use_channel_list.append(mapping_table.loc[i, 'PxN(channel)'])
 
-path = r'.\dataset\\'
+path = r'.\raw_fcs\\'
 for i in range(len(samples_info)):
     file_path = glob(path + samples_info[i]['file_flow_id'] + '\\*.fcs')
     samples_info[i]['data'] = fc.transform.to_rfi(
