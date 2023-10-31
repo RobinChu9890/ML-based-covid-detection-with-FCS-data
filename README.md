@@ -28,4 +28,8 @@ Ans.
 
 By using gate methods, cells in a specific region can be chosen and isolated for further analysis. For example, if the target cells are bigger in size, a gate can be set on FSC (parameter for analyzing cell size) versus SSC plot. Additionally, FlowCal library provides gate functions to retain events that satisfy certain criteria but to discard those do not. For instance, an ellipse gate can retain an ellipse area by specifying three parameters. On the other hand, a density gate identifies region with density of events. There is only one parameter (i.e. gate_fraction) that is required for users to control, which is easier than the ellipse gate to define a shape that is more similar in the ungated map.
 
-> The answer of both questions refers to 
+> The answer of both questions refers to the following papers:
+> 
+> [1] McKinnon, Katherine M. "Flow cytometry: an overview." Current protocols in immunology 120.1 (2018): 5-1.
+> 
+> [2] Adan, Aysun, et al. "Flow cytometry: basic principles and applications." Critical reviews in biotechnology 37.2 (2017): 163-176.
